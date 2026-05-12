@@ -67,4 +67,9 @@ RUN git config --system --add safe.directory '*' \
 
 ENV COMPOSER_CACHE_DIR=/tmp/composer-cache
 
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 WORKDIR /app
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+CMD ["sh"]

@@ -14,6 +14,10 @@ Includes:
 Images are published to the [GitHub Container Registry](https://github.com/metadrop/drupal-artifact-builder-docker/pkgs/container/drupal-artifact-builder-docker).
 
 <!-- IMAGES-TABLE-START -->
+| | Node 20 | Node 22 | Node 24 |
+|---|---|---|---|
+| **PHP 8.3** | [`ghcr.io/metadrop/drupal-artifact-builder-docker:php8.3-node20`](https://github.com/metadrop/drupal-artifact-builder-docker/pkgs/container/drupal-artifact-builder-docker) | [`ghcr.io/metadrop/drupal-artifact-builder-docker:php8.3-node22`](https://github.com/metadrop/drupal-artifact-builder-docker/pkgs/container/drupal-artifact-builder-docker) | [`ghcr.io/metadrop/drupal-artifact-builder-docker:php8.3-node24`](https://github.com/metadrop/drupal-artifact-builder-docker/pkgs/container/drupal-artifact-builder-docker) |
+| **PHP 8.4** | [`ghcr.io/metadrop/drupal-artifact-builder-docker:php8.4-node20`](https://github.com/metadrop/drupal-artifact-builder-docker/pkgs/container/drupal-artifact-builder-docker) | [`ghcr.io/metadrop/drupal-artifact-builder-docker:php8.4-node22`](https://github.com/metadrop/drupal-artifact-builder-docker/pkgs/container/drupal-artifact-builder-docker) | [`ghcr.io/metadrop/drupal-artifact-builder-docker:php8.4-node24`](https://github.com/metadrop/drupal-artifact-builder-docker/pkgs/container/drupal-artifact-builder-docker) |
 <!-- IMAGES-TABLE-END -->
 
 ## Build

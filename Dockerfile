@@ -65,4 +65,6 @@ RUN git config --system --add safe.directory '*' \
     && git config --system user.email "artifact-builder@localhost" \
     && git config --system user.name "Artifact Builder"
 
+ENV COMPOSER_CACHE_DIR=/tmp/composer-cache
+
 WORKDIR /app

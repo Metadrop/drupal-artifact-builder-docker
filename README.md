@@ -1,5 +1,7 @@
 # drupal-artifact-builder Docker image
 
+[![Build and publish](https://github.com/metadrop/drupal-artifact-builder-docker/actions/workflows/build-publish.yml/badge.svg)](https://github.com/metadrop/drupal-artifact-builder-docker/actions/workflows/build-publish.yml)
+
 Alpine-based Docker image that provides all the tools needed to run [drupal-artifact-builder](https://github.com/metadrop/drupal-artifact-builder) in CI pipelines or automated environments.
 
 Includes:

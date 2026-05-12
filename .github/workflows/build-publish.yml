@@ -29,15 +29,9 @@ jobs:
 
       - uses: docker/setup-buildx-action@v3
 
-      - name: Resolve image tags
-        id: tags
-        run: |
-          IMAGE="ghcr.io/$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')"
-          TAGS="${IMAGE}:php${{ matrix.php_version }}-node${{ matrix.node_version }}"
-          if [[ "${{ matrix.php_version }}" == "8.3" && "${{ matrix.node_version }}" == "20" ]]; then
-            TAGS="${TAGS},${IMAGE}:latest"
-          fi
-          echo "tags=${TAGS}" >> "$GITHUB_OUTPUT"
+      - name: Resolve image name
+        id: image
+        run: echo "name=ghcr.io/$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_OUTPUT"
 
       - uses: docker/build-push-action@v6
         with:
@@ -46,6 +40,6 @@ jobs:
           build-args: |
             PHP_VERSION=${{ matrix.php_version }}
             NODE_VERSION=${{ matrix.node_version }}
-          tags: ${{ steps.tags.outputs.tags }}
+          tags: ${{ steps.image.outputs.name }}:php${{ matrix.php_version }}-node${{ matrix.node_version }}
           cache-from: type=gha,scope=php${{ matrix.php_version }}-node${{ matrix.node_version }}
           cache-to: type=gha,mode=max,scope=php${{ matrix.php_version }}-node${{ matrix.node_version }}

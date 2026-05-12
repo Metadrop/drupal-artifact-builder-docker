@@ -7,7 +7,7 @@ FROM composer:2 AS composer
 FROM php:${PHP_VERSION}-cli-alpine
 
 RUN apk add --no-cache \
-        bash git openssh-client unzip curl \
+        bash git openssh-client unzip curl su-exec \
         # Runtime libs (kept after build)
         libzip libpng libjpeg-turbo freetype libwebp \
         icu-libs gmp libldap libpq libxslt \

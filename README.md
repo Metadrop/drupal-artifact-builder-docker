@@ -9,6 +9,13 @@ Includes:
 - Node.js + npm/npx (for frontend asset compilation steps)
 - Git with a default system identity (`artifact-builder@localhost`)
 
+## Published images
+
+Images are published to the [GitHub Container Registry](https://github.com/metadrop/drupal-artifact-builder-docker/pkgs/container/drupal-artifact-builder-docker).
+
+<!-- IMAGES-TABLE-START -->
+<!-- IMAGES-TABLE-END -->
+
 ## Build
 
 ```bash

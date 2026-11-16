@@ -49,8 +49,8 @@ RUN apk add --no-cache \
         tidy \
         xsl \
         zip \
-    && pecl install apcu redis imagick \
-    && docker-php-ext-enable apcu redis imagick \
+    && pecl install apcu redis imagick igbinary \
+    && docker-php-ext-enable apcu redis imagick igbinary \
     && apk del .build-deps \
     && rm -rf /tmp/* /var/cache/apk/* /usr/src/php/ext/*
 
